@@ -15,6 +15,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.academytest.ui.theme.AcademyTestTheme
 import com.academytest.viewmodels.ItemState
+import androidx.compose.ui.res.stringResource
+import com.academytest.R
 
 /**
  * A single list row displaying the item name, favorite subtitle,
@@ -38,7 +40,7 @@ fun ItemRowView(
                 color = MaterialTheme.colorScheme.onSurface,
             )
             Text(
-                text = if (item.isFavorite) "Preferito" else "Non preferito",
+                text = if (item.isFavorite) stringResource(R.string.status_favorite) else stringResource(R.string.status_not_favorite),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

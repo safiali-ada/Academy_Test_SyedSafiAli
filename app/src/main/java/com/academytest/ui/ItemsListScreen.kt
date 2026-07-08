@@ -48,6 +48,8 @@ import com.academytest.ui.theme.AcademyTestTheme
 import com.academytest.ui.theme.IOSRed
 import com.academytest.viewmodels.ItemState
 import com.academytest.viewmodels.ItemsListViewModel
+import androidx.compose.ui.res.stringResource
+import com.academytest.R
 
 /**
  * List screen displaying sorted items with swipe-to-delete,
@@ -102,7 +104,7 @@ private fun ItemsListTopBar(
     LargeTopAppBar(
         title = {
             Text(
-                text = "Oggetti",
+                text = stringResource(R.string.title_items),
                 style = MaterialTheme.typography.headlineLarge,
             )
         },
@@ -110,7 +112,7 @@ private fun ItemsListTopBar(
             IconButton(onClick = onAddClick) {
                 Icon(
                     imageVector = Icons.Filled.Add,
-                    contentDescription = "Aggiungi oggetto",
+                    contentDescription = stringResource(R.string.cd_add_item),
                     tint = MaterialTheme.colorScheme.primary,
                 )
             }
@@ -180,7 +182,7 @@ private fun ItemsList(
                     ) {
                         Icon(
                             imageVector = Icons.Outlined.Delete,
-                            contentDescription = "Elimina",
+                            contentDescription = stringResource(R.string.cd_delete),
                             tint = Color.White,
                             modifier = Modifier.padding(end = 20.dp),
                         )
@@ -243,13 +245,13 @@ private fun EmptyStateView(
         )
         Spacer(modifier = Modifier.height(12.dp))
         Text(
-            text = "Nessun oggetto",
+            text = stringResource(R.string.empty_title),
             style = MaterialTheme.typography.titleLarge,
             color = MaterialTheme.colorScheme.onBackground,
         )
         Spacer(modifier = Modifier.height(4.dp))
         Text(
-            text = "Aggiungi un oggetto dalla barra in alto.",
+            text = stringResource(R.string.empty_subtitle),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
@@ -263,7 +265,7 @@ private fun EmptyStateView(
             ),
         ) {
             Text(
-                "Aggiungi oggetto",
+                stringResource(R.string.action_add_item),
                 style = MaterialTheme.typography.bodyLarge,
             )
         }

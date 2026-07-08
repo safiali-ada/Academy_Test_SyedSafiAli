@@ -30,6 +30,8 @@ import androidx.activity.compose.BackHandler
 import com.academytest.ui.theme.AcademyTestTheme
 import com.academytest.viewmodels.ItemState
 import com.academytest.viewmodels.ItemsListViewModel
+import androidx.compose.ui.res.stringResource
+import com.academytest.R
 
 /**
  * Root content screen managing list ↔ detail navigation with
@@ -111,13 +113,13 @@ private fun DetailPlaceholder(modifier: Modifier = Modifier) {
         )
         Spacer(modifier = Modifier.height(12.dp))
         Text(
-            text = "Nessun oggetto",
+            text = stringResource(R.string.empty_title),
             style = MaterialTheme.typography.titleLarge,
             color = MaterialTheme.colorScheme.onBackground,
         )
         Spacer(modifier = Modifier.height(4.dp))
         Text(
-            text = "Aggiungi un oggetto dalla lista.",
+            text = stringResource(R.string.empty_subtitle_detail),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,

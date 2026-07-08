@@ -1,0 +1,14 @@
+# Build outputs
+/build/
+/app/build/
+.gradle/
+
+# Local configuration
+local.properties
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store

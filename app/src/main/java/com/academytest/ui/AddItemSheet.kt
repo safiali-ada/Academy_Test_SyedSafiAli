@@ -36,6 +36,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.academytest.ui.theme.AcademyTestTheme
+import androidx.compose.ui.res.stringResource
+import com.academytest.R
 
 /**
  * Bottom sheet for adding a new item, mirroring the SwiftUI AddItemView.
@@ -80,14 +82,14 @@ fun AddItemSheet(
             ) {
                 TextButton(onClick = onDismiss) {
                     Text(
-                        "Annulla",
+                        stringResource(R.string.action_cancel),
                         color = MaterialTheme.colorScheme.primary,
                         style = MaterialTheme.typography.bodyLarge,
                     )
                 }
 
                 Text(
-                    "Aggiungi",
+                    stringResource(R.string.title_add),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onBackground,
                 )
@@ -101,7 +103,7 @@ fun AddItemSheet(
                     enabled = canSave,
                 ) {
                     Text(
-                        "Salva",
+                        stringResource(R.string.action_save),
                         style = MaterialTheme.typography.bodyLarge.copy(
                             fontWeight = FontWeight.SemiBold
                         ),
@@ -118,7 +120,7 @@ fun AddItemSheet(
 
             // ── Section header ─────────────────────────────────────
             Text(
-                text = "NUOVO OGGETTO",
+                text = stringResource(R.string.section_new_item),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(start = 32.dp, bottom = 6.dp),
@@ -137,7 +139,7 @@ fun AddItemSheet(
                     onValueChange = { name = it },
                     placeholder = {
                         Text(
-                            "Nome",
+                            stringResource(R.string.label_name),
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
                     },

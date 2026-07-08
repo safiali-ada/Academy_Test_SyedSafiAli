@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AcademyTest</string>
+
+    <!-- Items List Screen -->
+    <string name="title_items">Oggetti</string>
+    <string name="empty_title">Nessun oggetto</string>
+    <string name="empty_subtitle">Aggiungi un oggetto dalla barra in alto.</string>
+    <string name="action_add_item">Aggiungi oggetto</string>
+    <string name="cd_add_item">Aggiungi oggetto</string>
+    <string name="cd_delete">Elimina</string>
+
+    <!-- Add Item Sheet -->
+    <string name="action_cancel">Annulla</string>
+    <string name="title_add">Aggiungi</string>
+    <string name="action_save">Salva</string>
+    <string name="section_new_item">NUOVO OGGETTO</string>
+    <string name="label_name">Nome</string>
+
+    <!-- Item Detail Screen -->
+    <string name="cd_back">Indietro</string>
+    <string name="cd_delete_item">Elimina oggetto</string>
+    <string name="section_item">OGGETTO</string>
+    <string name="label_favorite">Preferito</string>
+
+    <!-- Item Row View -->
+    <string name="status_favorite">Preferito</string>
+    <string name="status_not_favorite">Non preferito</string>
+
+    <!-- Favorite Button -->
+    <string name="cd_remove_favorite">Rimuovi dai preferiti</string>
+    <string name="cd_add_favorite">Aggiungi ai preferiti</string>
+
+    <!-- Content Screen (Detail placeholder) -->
+    <string name="empty_subtitle_detail">Aggiungi un oggetto dalla lista.</string>
+</resources>

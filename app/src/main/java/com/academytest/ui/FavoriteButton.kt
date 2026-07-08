@@ -19,6 +19,8 @@ import androidx.compose.ui.unit.dp
 import com.academytest.ui.theme.AcademyTestTheme
 import com.academytest.ui.theme.IOSGray
 import com.academytest.ui.theme.IOSYellow
+import androidx.compose.ui.res.stringResource
+import com.academytest.R
 
 /**
  * Star toggle button matching the iOS FavoriteButton.
@@ -32,7 +34,7 @@ fun FavoriteButton(
     onToggle: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val label = if (isFavorite) "Rimuovi dai preferiti" else "Aggiungi ai preferiti"
+    val label = if (isFavorite) stringResource(R.string.cd_remove_favorite) else stringResource(R.string.cd_add_favorite)
 
     IconButton(
         onClick = onToggle,

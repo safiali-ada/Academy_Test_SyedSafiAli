@@ -28,6 +28,8 @@ import androidx.compose.ui.unit.dp
 import com.academytest.ui.theme.AcademyTestTheme
 import com.academytest.ui.theme.IOSRed
 import com.academytest.viewmodels.ItemState
+import androidx.compose.ui.res.stringResource
+import com.academytest.R
 
 /**
  * Detail screen for a single item, styled as an iOS-like Form.
@@ -59,7 +61,7 @@ fun ItemDetailScreen(
                     IconButton(onClick = onBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Indietro",
+                            contentDescription = stringResource(R.string.cd_back),
                             tint = MaterialTheme.colorScheme.primary,
                         )
                     }
@@ -68,7 +70,7 @@ fun ItemDetailScreen(
                     IconButton(onClick = onDelete) {
                         Icon(
                             imageVector = Icons.Outlined.Delete,
-                            contentDescription = "Elimina oggetto",
+                            contentDescription = stringResource(R.string.cd_delete_item),
                             tint = IOSRed,
                         )
                     }
@@ -87,7 +89,7 @@ fun ItemDetailScreen(
         ) {
             // Section header
             Text(
-                text = "OGGETTO",
+                text = stringResource(R.string.section_item),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(start = 32.dp, bottom = 6.dp),
@@ -110,7 +112,7 @@ fun ItemDetailScreen(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            text = "Nome",
+                            text = stringResource(R.string.label_name),
                             style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.onSurface,
                         )
@@ -136,7 +138,7 @@ fun ItemDetailScreen(
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Text(
-                            text = "Preferito",
+                            text = stringResource(R.string.label_favorite),
                             style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.onSurface,
                         )
